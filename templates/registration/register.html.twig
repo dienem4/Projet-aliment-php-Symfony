@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block monTitre %}
+    Inscription sur le site
+{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn btn-success">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
+
+
+{# {% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block monTitre %}
+    Inscription sur le site
+{% endblock %}
+{% block body %}
+    {{ form_start(form) }}
+        {{form_row(form.username,{
+            "attr" : {
+                "placeholder":"Saisir votre login"
+            },
+            "label" : "Votre login"
+        })}}
+        {{ form_widget(form) }}
+        <input type="submit" class="btn btn-primary" value="valider">
+    {{ form_end(form) }}
+{% endblock %} #}
